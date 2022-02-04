@@ -149,7 +149,7 @@ class Testdata:
     USERNAME ='silvester.arpad.varga@gmail.com'
     #PASSWORD = ''
 
-    with open('/Users/openmindschooling/MyStuff/Web/Training360/Automated Tests (Selenium Python)/Configs/password.txt', 'r') as file:
+    with open('/Users/openmindschooling/MyStuff/Web/Training360/AutomatedTests(SeleniumPython)/Configs/password.txt', 'r') as file:
 
         for read in file:
             PASSWORD = read
