@@ -14,9 +14,6 @@ def init_driver(request):
     yield
     browser.close()
 
-@pytest.hookimpl(trylast=True)
-def pytest_configure(config):
-    allure.environment(test_server='testserver', report='report_allure')
 
 
 
