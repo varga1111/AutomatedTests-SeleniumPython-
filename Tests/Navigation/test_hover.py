@@ -20,8 +20,9 @@ sys.path.insert(0, '/Users/openmindschooling/MyStuff/Web/Training360/AutomatedTe
 sys.path.insert(0, '/Users/openmindschooling/MyStuff/Web/Training360/AutomatedTests/Pages/Navbar/Discounts')
 sys.path.insert(0, '/Users/openmindschooling/MyStuff/Web/Training360/AutomatedTests/Pages/Navbar/Navbar_IT_Courses_Dropdown/Career_Start_Program/For_You')
 sys.path.insert(0, '/Users/openmindschooling/MyStuff/Web/Training360/AutomatedTests/Pages/Navbar/Navbar_IT_Courses_Dropdown/Career_Start_Program/For_Employers')
-
 sys.path.insert(0, '/Users/openmindschooling/MyStuff/Web/Training360/AutomatedTests/Configs')
+
+import allure
 
 from testdata import Testdata
 from test_parent import Parent_test

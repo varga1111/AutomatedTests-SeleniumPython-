@@ -1,6 +1,6 @@
 import pytest
 from selenium import webdriver
-
+import allure
 from testdata import Testdata
 
 
@@ -13,6 +13,10 @@ def init_driver(request):
     request.cls.browser = browser
     yield
     browser.close()
+
+@pytest.hookimpl(trylast=True)
+def pytest_configure(config):
+    allure.environment(test_server='testserver', report='report_allure')
 
 
 

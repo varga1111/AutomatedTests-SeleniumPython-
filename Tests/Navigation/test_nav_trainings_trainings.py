@@ -3,6 +3,8 @@ sys.path.insert(0, '/Users/openmindschooling/MyStuff/Web/Training360/AutomatedTe
 sys.path.insert(0, '/Users/openmindschooling/MyStuff/Web/Training360/AutomatedTests/Configs')
 sys.path.insert(0, '/Users/openmindschooling/MyStuff/Web/Training360/AutomatedTests/Pages/Navbar/Navbar_Trainings_Dropdown/Trainings_Trainings')
 
+import allure
+
 from testdata import Testdata
 from test_parent import Parent_test
 

@@ -2,13 +2,15 @@ import sys
 sys.path.insert(0, '/Users/openmindschooling/MyStuff/Web/Training360/AutomatedTests/Pages/Navbar')
 sys.path.insert(0, '/Users/openmindschooling/MyStuff/Web/Training360/AutomatedTests/Configs')
 
+import allure
+
 from testdata import Testdata
 from login import Login
 from test_parent import Parent_test
 from mainp_after_login import Mainp_after_login
 
 class Test_login(Parent_test):
-
+    
     def test_loginpage_title(self):
         self.browser = Login(self.browser)
 

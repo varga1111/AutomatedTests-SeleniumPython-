@@ -3,6 +3,8 @@ sys.path.insert(0, '/Users/openmindschooling/MyStuff/Web/Training360/AutomatedTe
 sys.path.insert(0, '/Users/openmindschooling/MyStuff/Web/Training360/AutomatedTests/Pages/Navbar/E_Learning')
 sys.path.insert(0, '/Users/openmindschooling/MyStuff/Web/Training360/AutomatedTests/Configs')
 
+import allure
+
 from testdata import Testdata
 from test_parent import Parent_test
 from e_learning import E_Learning
@@ -12,7 +14,7 @@ from e_learning_unique import E_Learning_Unique
 from mentored_courses import Mentored_Courses
 
 class Test_Nav_E_Learning(Parent_test):
-
+    
     def test_get_e_learning_page_title(self):
         self.browser = E_Learning(self.browser)        
         title = self.browser.get_e_learning_title(Testdata.E_LEARNING_TITLE)
