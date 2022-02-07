@@ -3,6 +3,8 @@ sys.path.insert(0, '/Users/openmindschooling/MyStuff/Web/Training360/AutomatedTe
 sys.path.insert(0, '/Users/openmindschooling/MyStuff/Web/Training360/AutomatedTests/Configs')
 sys.path.insert(0, '/Users/openmindschooling/MyStuff/Web/Training360/AutomatedTests/Pages/Navbar/Navbar_Trainings_Dropdown/Trainings_Softskill')
 
+from conftest import init_driver
+
 import allure
 
 from testdata import Testdata
@@ -130,9 +132,3 @@ class Test_Nav_Trainings_Softskill(Parent_test):
         title = self.browser.get_trainings_softskill_coaching_title(Testdata.TRAININGS_SOFTSKILL_COACHING_TITLE)
 
         assert title == Testdata.TRAININGS_SOFTSKILL_COACHING_TITLE
-
-
-    def test_nav_back4(self):
-        self.browser = Trainings_Softskill_Coaching(self.browser)
-
-        self.browser.go_back()

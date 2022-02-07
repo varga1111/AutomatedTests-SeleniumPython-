@@ -22,6 +22,8 @@ sys.path.insert(0, '/Users/openmindschooling/MyStuff/Web/Training360/AutomatedTe
 sys.path.insert(0, '/Users/openmindschooling/MyStuff/Web/Training360/AutomatedTests/Pages/Navbar/Navbar_IT_Courses_Dropdown/Career_Start_Program/For_Employers')
 sys.path.insert(0, '/Users/openmindschooling/MyStuff/Web/Training360/AutomatedTests/Configs')
 
+from conftest import init_driver
+
 import allure
 
 from testdata import Testdata

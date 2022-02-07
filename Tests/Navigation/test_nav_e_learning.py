@@ -3,6 +3,8 @@ sys.path.insert(0, '/Users/openmindschooling/MyStuff/Web/Training360/AutomatedTe
 sys.path.insert(0, '/Users/openmindschooling/MyStuff/Web/Training360/AutomatedTests/Pages/Navbar/E_Learning')
 sys.path.insert(0, '/Users/openmindschooling/MyStuff/Web/Training360/AutomatedTests/Configs')
 
+from conftest import init_driver
+
 import allure
 
 from testdata import Testdata
@@ -137,7 +139,3 @@ class Test_Nav_E_Learning(Parent_test):
         title = self.browser.get_e_learning_unique_title(Testdata.E_LEARNING_UNIQUE_TITLE)
 
         assert title == Testdata.E_LEARNING_UNIQUE_TITLE
-
-    def test_nav_back4(self):
-        self.browser = E_Learning_Unique(self.browser)
-        self.browser.go_back()

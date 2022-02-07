@@ -13,7 +13,7 @@ class Base_methods(Testdata):
     def __init__(self, browser):
         self.browser = browser
         self.browser.maximize_window()
-
+        
 
     def do_click(self, by_locator):
          wait(self.browser, 20).until(EC.element_to_be_clickable(by_locator)).click()

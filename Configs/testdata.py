@@ -7,7 +7,7 @@ class Testdata:
 
     PATH = '/Users/openmindschooling/MyStuff/Web/Chrome_webdriver/chromedriver'
     
-    browser = webdriver.Chrome(PATH)
+    #browser = webdriver.Chrome(PATH)
 
     '''Pages'''
     # Main
