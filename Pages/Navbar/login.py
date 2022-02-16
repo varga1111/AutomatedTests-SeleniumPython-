@@ -23,30 +23,34 @@ class Login(Base_methods):
     
     '''Constructor of the Parent class'''
     def __init__(self, browser):
-
         super().__init__(browser)
         self.browser.get(Testdata.URL_LOGIN)
 
 
         '''Page actions for login'''
     def get_page_title(self, title):
-
         return self.get_title(title)
 
     
     def is_signup_link_exist(self):
-
         return self.is_visible(self.signup_link)
 
 
     def do_login(self, username, password):
-
         self.do_send_keys(self.email, username)
-
         self.do_send_keys(self.password, password)
-
         self.do_click(self.login_button)
 
-        return Mainp_after_login(self.browser)
+        #return Mainp_after_login(self.browser)
+
+    
+    def get_title_after_login(self, title):
+        return self.get_title(title)
+
+
+    def save_screenshot(self, name):
+        self.browser.save_screenshot(name)
+
+        
 
 

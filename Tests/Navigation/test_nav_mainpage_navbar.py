@@ -113,67 +113,138 @@ class Test_Nav_MainPage(Parent_test):
         # Course Schedules
     def test_nav_to_course_schedules(self):
         self.browser = MainPage(self.browser)
+        try:
+            self.browser.nav_to_course_schedules()
 
-        self.browser.nav_to_course_schedules()
+        except:
+            screen_shot = 'test_get_e_learning_unique_title.png'
+            self.browser.save_screenshot(screen_shot)
+            with open (screen_shot, mode= 'rb') as file:
+                f = file.read()
+            allure.attach(f, 'screenshot', allure.attachment_type.PNG )
+            assert False
 
 
     def test_get_course_schedules_page_title(self):
         self.browser = Course_Schedules(self.browser)
+        try:
+            title = self.browser.get_course_schedules_page_title(Testdata.COURSE_SCHEDULES_TITLE)
+            assert title == Testdata.COURSE_SCHEDULES_TITLE
 
-        title = self.browser.get_course_schedules_page_title(Testdata.COURSE_SCHEDULES_TITLE)
+        except:
+            screen_shot = 'test_get_e_learning_unique_title.png'
+            self.browser.save_screenshot(screen_shot)
+            with open (screen_shot, mode= 'rb') as file:
+                f = file.read()
+            allure.attach(f, 'screenshot', allure.attachment_type.PNG )
+            assert False
 
-        assert title == Testdata.COURSE_SCHEDULES_TITLE
-    
+            
 
     def test_nav_to_mainpage_from_course_schedules(self):
         self.browser = Course_Schedules(self.browser)    
+        try:
+            self.browser.nav_to_mainpage()
+    
+        except:
+            screen_shot = 'test_get_e_learning_unique_title.png'
+            self.browser.save_screenshot(screen_shot)
+            with open (screen_shot, mode= 'rb') as file:
+                f = file.read()
+            allure.attach(f, 'screenshot', allure.attachment_type.PNG )
+            assert False
 
-        self.browser.nav_to_mainpage()
-
+            
 
 
         # Discounts
     def test_nav_to_discounts(self):
         self.browser = MainPage(self.browser)
+        try:
+            self.browser.nav_to_discounts()
 
-        self.browser.nav_to_discounts()
+        except:
+            screen_shot = 'test_get_e_learning_unique_title.png'
+            self.browser.save_screenshot(screen_shot)
+            with open (screen_shot, mode= 'rb') as file:
+                f = file.read()
+            allure.attach(f, 'screenshot', allure.attachment_type.PNG )
+            assert False
 
 
     def test_get_discount_page_title(self):
         self.browser = Discounts(self.browser)
-
-        title = self.browser.get_discount_page_title(Testdata.DISCOUNTS_TITLE)
-
-        assert title == Testdata.DISCOUNTS_TITLE
+        try:
+            title = self.browser.get_discount_page_title(Testdata.DISCOUNTS_TITLE)
+            assert title == Testdata.DISCOUNTS_TITLE
     
+        except:
+            screen_shot = 'test_get_e_learning_unique_title.png'
+            self.browser.save_screenshot(screen_shot)
+            with open (screen_shot, mode= 'rb') as file:
+                f = file.read()
+            allure.attach(f, 'screenshot', allure.attachment_type.PNG )
+            assert False
+
+
     def test_nav_to_mainpage_from_discounts(self):
         self.browser = Discounts(self.browser) 
+        try:
+            self.browser.nav_to_mainpage()
 
-        self.browser.nav_to_mainpage()
+        except:
+            screen_shot = 'test_get_e_learning_unique_title.png'
+            self.browser.save_screenshot(screen_shot)
+            with open (screen_shot, mode= 'rb') as file:
+                f = file.read()
+            allure.attach(f, 'screenshot', allure.attachment_type.PNG )
+            assert False
+
 
 
 
         # Contacts
     def test_nav_to_contacts(self):
         self.browser = MainPage(self.browser)
+        try:
+            self.browser.nav_to_contacts()
 
-        self.browser.nav_to_contacts()
+        except:
+            screen_shot = 'test_get_e_learning_unique_title.png'
+            self.browser.save_screenshot(screen_shot)
+            with open (screen_shot, mode= 'rb') as file:
+                f = file.read()
+            allure.attach(f, 'screenshot', allure.attachment_type.PNG )
+            assert False
 
 
     def test_get_contacts_page_title(self):
         self.browser = Contact(self.browser)
-        
-        title = self.browser.get_contacts_page_title(Testdata.CONTACTS_TITLE)
+        try:
+            title = self.browser.get_contacts_page_title(Testdata.CONTACTS_TITLE)
+            assert title == Testdata.CONTACTS_TITLE
 
-        assert title == Testdata.CONTACTS_TITLE
+        except:
+            screen_shot = 'test_get_e_learning_unique_title.png'
+            self.browser.save_screenshot(screen_shot)
+            with open (screen_shot, mode= 'rb') as file:
+                f = file.read()
+            allure.attach(f, 'screenshot', allure.attachment_type.PNG )
+            assert False
 
 
     def test_nav_to_mainpage_from_contacts(self):
         self.browser = Contact(self.browser)
+        try:
+            self.browser.nav_to_mainpage()
 
-        self.browser.nav_to_mainpage()
-
-
+        except:
+            screen_shot = 'test_get_e_learning_unique_title.png'
+            self.browser.save_screenshot(screen_shot)
+            with open (screen_shot, mode= 'rb') as file:
+                f = file.read()
+            allure.attach(f, 'screenshot', allure.attachment_type.PNG )
+            assert False
 
 
     

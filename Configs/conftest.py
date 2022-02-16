@@ -1,9 +1,8 @@
 import pytest
-from selenium import webdriver
-import allure
 from testdata import Testdata
-import time
-
+from selenium import webdriver 
+import allure
+import os
 
 @pytest.fixture(params=['Chrome'], scope ='class')
 def init_driver(request):
@@ -13,8 +12,5 @@ def init_driver(request):
         browser.maximize_window()
     request.cls.browser = browser
     yield
-    time.sleep(3)
     browser.close()
-
-
 

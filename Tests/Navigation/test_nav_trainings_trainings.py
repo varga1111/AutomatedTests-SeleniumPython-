@@ -21,10 +21,17 @@ class Test_Nav_Trainings_Projectmanagement(Parent_test):
     
     def test_get_trainings_trainings_title(self):
         self.browser = Trainings_Trainings(self.browser)
+        try:
+            title = self.browser.get_trainings_trainings_title(Testdata.TRAININGS_TRAININGS_TITLE)
+            assert title == Testdata.TRAININGS_TRAININGS_TITLE
 
-        title = self.browser.get_trainings_trainings_title(Testdata.TRAININGS_TRAININGS_TITLE)
-
-        assert title == Testdata.TRAININGS_TRAININGS_TITLE
+        except:
+            screen_shot = 'test_login.png'
+            self.browser.save_screenshot(screen_shot)
+            with open (screen_shot, mode= 'rb') as file:
+                f = file.read()
+            allure.attach(f, 'screenshot', allure.attachment_type.PNG )
+            assert False
 
 
 
@@ -32,22 +39,58 @@ class Test_Nav_Trainings_Projectmanagement(Parent_test):
         # Check Trainings/Projectmanagement Page Elements Exist
     def test_btn_soft_skill_trainings_exists(self):
         self.browser = Trainings_Trainings(self.browser)
-        self.browser.btn_softskill_trainings_exists()
+        try:
+            self.browser.btn_softskill_trainings_exists()
+
+        except:
+            screen_shot = 'test_login.png'
+            self.browser.save_screenshot(screen_shot)
+            with open (screen_shot, mode= 'rb') as file:
+                f = file.read()
+            allure.attach(f, 'screenshot', allure.attachment_type.PNG )
+            assert False
         
 
     def test_btn_projectmanagement_exists(self):
         self.browser = Trainings_Trainings(self.browser)
-        self.browser.btn_projectmanagement_exists()
+        try:
+            self.browser.btn_projectmanagement_exists()
+
+        except:
+            screen_shot = 'test_login.png'
+            self.browser.save_screenshot(screen_shot)
+            with open (screen_shot, mode= 'rb') as file:
+                f = file.read()
+            allure.attach(f, 'screenshot', allure.attachment_type.PNG )
+            assert False
 
 
     def test_btn_trainings_open_trainings_schedule_exists(self):
         self.browser = Trainings_Trainings(self.browser)
-        self.browser.btn_trainings_open_trainings_schedule_exists()
+        try:
+            self.browser.btn_trainings_open_trainings_schedule_exists()
+
+        except:
+            screen_shot = 'test_login.png'
+            self.browser.save_screenshot(screen_shot)
+            with open (screen_shot, mode= 'rb') as file:
+                f = file.read()
+            allure.attach(f, 'screenshot', allure.attachment_type.PNG )
+            assert False
 
 
     def test_btn_trainings_catalogue_exists(self):
         self.browser = Trainings_Trainings(self.browser)
-        self.browser.btn_trainings_catalogue_exists()
+        try:
+            self.browser.btn_trainings_catalogue_exists()
+
+        except:
+            screen_shot = 'test_login.png'
+            self.browser.save_screenshot(screen_shot)
+            with open (screen_shot, mode= 'rb') as file:
+                f = file.read()
+            allure.attach(f, 'screenshot', allure.attachment_type.PNG )
+            assert False
 
 
 
@@ -57,16 +100,32 @@ class Test_Nav_Trainings_Projectmanagement(Parent_test):
         # Navigate to Projectmanagement/Traditional Page
     def test_nav_to_softskill_trainings(self):
         self.browser = Trainings_Trainings(self.browser)
+        try:
+            self.browser.nav_to_softskill_trainings()
 
-        self.browser.nav_to_softskill_trainings()
+        except:
+            screen_shot = 'test_login.png'
+            self.browser.save_screenshot(screen_shot)
+            with open (screen_shot, mode= 'rb') as file:
+                f = file.read()
+            allure.attach(f, 'screenshot', allure.attachment_type.PNG )
+            assert False
 
 
     def test_get_trainings_softskill_title(self):
         self.browser = Trainings_Softskill(self.browser)
+        try:
+            title = self.browser.get_trainings_softskill_title(Testdata.TRAININGS_SOFTSKILL_TITLE)
+            assert title == Testdata.TRAININGS_SOFTSKILL_TITLE
 
-        title = self.browser.get_trainings_softskill_title(Testdata.TRAININGS_SOFTSKILL_TITLE)
+        except:
+            screen_shot = 'test_login.png'
+            self.browser.save_screenshot(screen_shot)
+            with open (screen_shot, mode= 'rb') as file:
+                f = file.read()
+            allure.attach(f, 'screenshot', allure.attachment_type.PNG )
+            assert False
 
-        assert title == Testdata.TRAININGS_SOFTSKILL_TITLE
 
     def test_nav_back1(self):
         self.browser = Trainings_Softskill(self.browser)
@@ -79,16 +138,31 @@ class Test_Nav_Trainings_Projectmanagement(Parent_test):
         # Navigate to Projectmanagement/Agile Page
     def test_nav_to_projectmanagement(self):
         self.browser = Trainings_Trainings(self.browser)
+        try:
+            self.browser.nav_to_projectmanagement()
 
-        self.browser.nav_to_projectmanagement()
+        except:
+            screen_shot = 'test_login.png'
+            self.browser.save_screenshot(screen_shot)
+            with open (screen_shot, mode= 'rb') as file:
+                f = file.read()
+            allure.attach(f, 'screenshot', allure.attachment_type.PNG )
+            assert False
 
 
     def test_get_projectmanagement_title(self):
         self.browser = Trainings_Projectmanagement(self.browser)
+        try:
+            title = self.browser.get_trainings_projectmanagement_title(Testdata.TRAININGS_PROJECTMANAGEMENT_TITLE)
+            assert title == Testdata.TRAININGS_PROJECTMANAGEMENT_TITLE
 
-        title = self.browser.get_trainings_projectmanagement_title(Testdata.TRAININGS_PROJECTMANAGEMENT_TITLE)
-
-        assert title == Testdata.TRAININGS_PROJECTMANAGEMENT_TITLE
+        except:
+            screen_shot = 'test_login.png'
+            self.browser.save_screenshot(screen_shot)
+            with open (screen_shot, mode= 'rb') as file:
+                f = file.read()
+            allure.attach(f, 'screenshot', allure.attachment_type.PNG )
+            assert False
 
 
     def test_nav_back2(self):
@@ -102,16 +176,31 @@ class Test_Nav_Trainings_Projectmanagement(Parent_test):
         # Navigate to Projectmanagement/Lean Page
     def test_nav_to_trainings_open_trainings_schedule(self):
         self.browser = Trainings_Trainings(self.browser)
+        try:
+            self.browser.nav_to_trainings_open_trainings_schedule()
 
-        self.browser.nav_to_trainings_open_trainings_schedule()
+        except:
+            screen_shot = 'test_login.png'
+            self.browser.save_screenshot(screen_shot)
+            with open (screen_shot, mode= 'rb') as file:
+                f = file.read()
+            allure.attach(f, 'screenshot', allure.attachment_type.PNG )
+            assert False
 
 
     def test_get_trainings_trainings_open_trainings_schedule(self):
         self.browser = Trainings_Trainings_Open_Trainings_Schedule(self.browser)
+        try:
+            title = self.browser.get_trainings_trainings_open_trainings_schedule_title(Testdata.TRAININGS_OPEN_SCHEDULE_TITLE)
+            assert title == Testdata.TRAININGS_OPEN_SCHEDULE_TITLE
 
-        title = self.browser.get_trainings_trainings_open_trainings_schedule_title(Testdata.TRAININGS_OPEN_SCHEDULE_TITLE)
-
-        assert title == Testdata.TRAININGS_OPEN_SCHEDULE_TITLE
+        except:
+            screen_shot = 'test_login.png'
+            self.browser.save_screenshot(screen_shot)
+            with open (screen_shot, mode= 'rb') as file:
+                f = file.read()
+            allure.attach(f, 'screenshot', allure.attachment_type.PNG )
+            assert False
 
     
     def test_nav_back3(self):
@@ -125,14 +214,28 @@ class Test_Nav_Trainings_Projectmanagement(Parent_test):
             # Navigate to Projectmanagement/Lean Page
     def test_nav_to_trainings_catalogue(self):
         self.browser = Trainings_Trainings(self.browser)
+        try:
+            self.browser.nav_to_trainings_catalogue()
 
-        self.browser.nav_to_trainings_catalogue()
+        except:
+            screen_shot = 'test_login.png'
+            self.browser.save_screenshot(screen_shot)
+            with open (screen_shot, mode= 'rb') as file:
+                f = file.read()
+            allure.attach(f, 'screenshot', allure.attachment_type.PNG )
+            assert False
 
 
     def test_get_trainings_trainings_catalogue_title(self):
         self.browser = Trainings_Trainings_Catalogue(self.browser)
+        try:
+            title = self.browser.get_trainings_trainings_catalogue_title(Testdata.TRAININGS_CATALOGUE_TITLE)
+            assert title == Testdata.TRAININGS_CATALOGUE_TITLE
 
-        title = self.browser.get_trainings_trainings_catalogue_title(Testdata.TRAININGS_CATALOGUE_TITLE)
-
-        assert title == Testdata.TRAININGS_CATALOGUE_TITLE
-
+        except:
+            screen_shot = 'test_login.png'
+            self.browser.save_screenshot(screen_shot)
+            with open (screen_shot, mode= 'rb') as file:
+                f = file.read()
+            allure.attach(f, 'screenshot', allure.attachment_type.PNG )
+            assert False
