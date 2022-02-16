@@ -146,7 +146,7 @@ class Testdata:
 
 
     '''Logindata'''
-    USERNAME ='silvester.arpad.vargagmail.com'
+    USERNAME ='silvester.arpad.varga@gmail.com'
     #PASSWORD = ''
 
     with open('/Users/openmindschooling/MyStuff/Web/Training360/AutomatedTests/Configs/password.txt', 'r') as file:
