@@ -1,12 +1,12 @@
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-import os
-from datetime import datetime
-from _pytest.nodes import Item
-from _pytest.runner import CallInfo
-import allure
-from allure_commons.types import AttachmentType
+#import os
+#from datetime import datetime
+#from _pytest.nodes import Item
+#from _pytest.runner import CallInfo
+#import allure
+#from allure_commons.types import AttachmentType
 from testdata import Testdata
 
 
@@ -15,7 +15,7 @@ def init_driver(request):
     global browser
     if request.param == 'Chrome':
         opt = Options()
-        opt.add_argument("--window-size=1920,1080")
+        #opt.add_argument("--window-size=1920,1080")
         opt.add_argument("--start-maximized")
         #opt.add_argument("--headless")
         browser = webdriver.Chrome(executable_path=Testdata.PATH, chrome_options=opt)
@@ -24,7 +24,7 @@ def init_driver(request):
     browser = request.cls.browser
     
     yield 
-    #browser.close()
+    browser.close()
 
 
 
