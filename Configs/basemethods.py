@@ -1,10 +1,10 @@
 from selenium.webdriver.support.ui import WebDriverWait as wait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
-
-
+import allure
 
 from testdata import Testdata
+
 
 '''This class is the parent of all pages.'''
 '''It contains all the generic methods and utilities for all pages.'''
@@ -13,30 +13,46 @@ class Base_methods(Testdata):
     def __init__(self, browser):
         self.browser = browser
         self.browser.maximize_window()
-        
-
-    def do_click(self, by_locator):
-         wait(self.browser, 20).until(EC.element_to_be_clickable(by_locator)).click()
 
 
-    def do_send_keys(self, by_locator, text):
-        wait(self.browser, 10).until(EC.presence_of_element_located(by_locator)).send_keys(text)
-
-
-    def is_visible(self, by_locator):
-        element = wait(self.browser, 10).until(EC.element_to_be_clickable(by_locator))
-        return bool(element)
-
-    
+        # Check Title
     def get_title(self, title):
         wait(self.browser, 10).until(EC.title_is(title))
         return self.browser.title
 
-    
+
+         # Click
+    def do_click(self, by_locator):
+         wait(self.browser, 20).until(EC.element_to_be_clickable(by_locator)).click()
+
+
+        #Type
+    def do_send_keys(self, by_locator, text):
+        wait(self.browser, 10).until(EC.presence_of_element_located(by_locator)).send_keys(text)
+        
+
+        # Hover (ex.: dropdown menus)
     def hover(self, element):
         actions = ActionChains(self.browser)
         actions.move_to_element(element)
         actions.perform()
+
+
+        # Check visibility of element
+    def is_visible(self, by_locator):
+        element = wait(self.browser, 10).until(EC.element_to_be_clickable(by_locator))
+        return bool(element) # or element.is_displayed() --> returns bool and verifies the element is on the screen not just xml, but the expected condition in this instance already verifies that
+
+
+        # Save screenshot (can't call the function in tests if not pre-defined)
+    def save_screenshot(self, name):
+        self.browser.save_screenshot(name)
+
+        # Displaying test steps in allure when called
+    def step_report(step_title):
+        with allure.step(step_title):
+            pass
+
     
     '''def go_back(self):
         self.browser.execute_script("window.history.go(-1)")'''
@@ -50,5 +66,3 @@ class Base_methods(Testdata):
         element = wait(self.browser, 10).until(EC.presence_of_element_located(by_locator))
         
         return element.text'''
-
-    

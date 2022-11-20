@@ -1,6 +1,6 @@
 import sys
 sys.path.insert(0, '/Users/openmindschooling/MyStuff/Web/Training360/AutomatedTests/Configs')
-
+from locators import Locators
 from basemethods import Base_methods
 
 from selenium.webdriver.common.by import By
@@ -8,79 +8,10 @@ from selenium.webdriver.common.by import By
 
 class Mainpage_It_Courses_Dropdown(Base_methods):
     
-    ''' By Locators'''
-        # From IT Courses Dropdown Buttons
-    btn_it_courses = (By.ID, 'MegaMenuIT') # 1
-    btn_it_courses_xpath = (By.XPATH, '//*[@id="MegaMenuIT"]')
-    btn_it_courses_admin = (By.XPATH, '//*[@id="PrimaryNavMainMenu"]/li[3]/div/div/div[2]/div[1]/div/div[1]/h4/a') # 1/a
-    btn_it_courses_dev = (By.XPATH, '//*[@id="PrimaryNavMainMenu"]/li[3]/div/div/div[2]/div[1]/div/div[2]/h4/a')   # 1/b
-    btn_leader_courses = (By.XPATH, '//*[@id="PrimaryNavMainMenu"]/li[3]/div/div/div[2]/div[1]/div/div[3]/h4/a')   # 1/c
-    btn_creating_value = (By.XPATH, '//*[@id="PrimaryNavMainMenu"]/li[3]/div/div/div[2]/div[1]/div/div[4]/h4/a')   # 1/d
-    btn_office = (By.ID, 'MegaMenuOffice')        # 2
-    btn_comp_man = (By.ID, 'MegaMenuERP')         # 3
-    btn_car_start_p = (By.ID, 'MegaMenuKSP')      # 4/a
-    btn_car_fy = (By.LINK_TEXT, 'Neked')           
-    btn_for_emp = (By.XPATH, '//*[@id="PrimaryNavMainMenu"]/li[3]/div/div/div[2]/div[4]/div/div[2]/h4/a')           # 4/b
-
-    # 1/a
-    btn_it_courses_admin_aws = (By.XPATH, '//*[@id="PrimaryNavMainMenu"]/li[3]/div/div/div[2]/div[1]/div/div[1]/a[1]')
-    btn_it_courses_admin_microsoft = (By.LINK_TEXT, ' Microsoft ')
-    btn_it_courses_admin_cisco = (By.LINK_TEXT, ' Cisco ')
-    btn_it_courses_admin_oracle = (By.LINK_TEXT, ' Oracle ')
-    btn_it_courses_admin_vmware = (By.LINK_TEXT, ' VMware ')
-    btn_it_courses_admin_ibm = (By.LINK_TEXT, ' IBM ')
-    btn_it_courses_admin_linux = (By.LINK_TEXT, ' Linux ')
-    btn_it_courses_admin_other = (By.XPATH, '//*[@id="PrimaryNavMainMenu"]/li[3]/div/div/div[2]/div[1]/div/div[1]/a[8]')
-
-    # 1/b
-    btn_it_courses_dev_aws = (By.XPATH, '//*[@id="PrimaryNavMainMenu"]/li[3]/div/div/div[2]/div[1]/div/div[2]/a[1]')
-    btn_it_courses_dev_micr = (By.LINK_TEXT, ' Microsoft (C#, ASP.NET, stb.) ')
-    btn_it_courses_dev_java = (By.LINK_TEXT, ' Java ')
-    btn_it_courses_dev_webdev = (By.XPATH, '//*[@id="PrimaryNavMainMenu"]/li[3]/div/div/div[2]/div[1]/div/div[2]/a[4]')
-    btn_it_courses_dev_mobdev = (By.XPATH, '//*[@id="PrimaryNavMainMenu"]/li[3]/div/div/div[2]/div[1]/div/div[2]/a[5]')
-    btn_it_courses_dev_pyth = (By.XPATH, '//*[@id="PrimaryNavMainMenu"]/li[3]/div/div/div[2]/div[1]/div/div[2]/a[6]')
-    btn_it_courses_dev_other = (By.XPATH, '//*[@id="PrimaryNavMainMenu"]/li[3]/div/div/div[2]/div[1]/div/div[2]/a[7]')
-
-    # 1/c
-    btn_leader_courses_itil = (By.XPATH, '//*[@id="PrimaryNavMainMenu"]/li[3]/div/div/div[2]/div[1]/div/div[3]/a[1]')
-    btn_leader_courses_risk = (By.XPATH, '//*[@id="PrimaryNavMainMenu"]/li[3]/div/div/div[2]/div[1]/div/div[3]/a[2]')
-    btn_leader_courses_busn_an = (By.XPATH, '//*[@id="PrimaryNavMainMenu"]/li[3]/div/div/div[2]/div[1]/div/div[3]/a[3]')
-
-    # 1/d
-    btn_creating_value_agile = (By.LINK_TEXT, ' Agilis ')
-    btn_creating_value_devops = (By.LINK_TEXT, ' DevOps ')
-
-    # 2
-    btn_office_mo = (By.LINK_TEXT, ' Microsoft Office ')
-    btn_office_mo365 = (By.LINK_TEXT, ' Microsoft Office 365 ')
-    btn_office_da = (By.XPATH, '//*[@id="PrimaryNavMainMenu"]/li[3]/div/div/div[2]/div[2]/div/div/a[3]')
-    btn_office_gwc = (By.LINK_TEXT, ' Google Workspace tanfolyamok ')
-
-    # 3
-    btn_comp_man_sap = (By.LINK_TEXT, ' SAP tanfolyamok ')
-    btn_comp_man_sfc = (By.LINK_TEXT, ' Salesforce tanfolyamok ')
-
-    # 4/a
-    btn_car_fy_jun_dev = (By.XPATH, '//*[@id="PrimaryNavMainMenu"]/li[3]/div/div/div[2]/div[4]/div/div[1]/a[1]')
-    btn_car_fy_app_ad = (By.XPATH, '//*[@id="PrimaryNavMainMenu"]/li[3]/div/div/div[2]/div[4]/div/div[1]/a[2]')
-    btn_car_fy_soft_test = (By.XPATH, '//*[@id="PrimaryNavMainMenu"]/li[3]/div/div/div[2]/div[4]/div/div[1]/a[3]')
-    btn_car_fy_hir_proc = (By.XPATH, '//*[@id="PrimaryNavMainMenu"]/li[3]/div/div/div[2]/div[4]/div/div[1]/a[4]')
-    btn_car_fy_apply = (By.XPATH, '//*[@id="PrimaryNavMainMenu"]/li[3]/div/div/div[2]/div[4]/div/div[1]/a[5]')
-    btn_car_fy_faq = (By.LINK_TEXT, ' GYIK ')
-
-    # 4/b
-    btn_for_emp_prog = (By.XPATH, '//*[@id="PrimaryNavMainMenu"]/li[3]/div/div/div[2]/div[4]/div/div[2]/a[1]')
-    btn_for_emp_jun_dev = (By.XPATH, '//*[@id="PrimaryNavMainMenu"]/li[3]/div/div/div[2]/div[4]/div/div[2]/a[2]')
-    btn_for_emp_fin = (By.XPATH, '//*[@id="PrimaryNavMainMenu"]/li[3]/div/div/div[2]/div[4]/div/div[2]/a[3]')
-    btn_for_emp_select = (By.XPATH, '//*[@id="PrimaryNavMainMenu"]/li[3]/div/div/div[2]/div[4]/div/div[2]/a[4]')
-    btn_for_emp_grnt = (By.XPATH, '//*[@id="PrimaryNavMainMenu"]/li[3]/div/div/div[2]/div[4]/div/div[2]/a[5]')
-
     def __init__(self, browser): 
         super().__init__(browser)
-
     
     ''' Hovers '''
-
     def hover_to_btn_it_courses(self):
         self.hover(self.browser.find_element_by_id('MegaMenuIT'))
 
@@ -97,202 +28,435 @@ class Mainpage_It_Courses_Dropdown(Base_methods):
         self.hover(self.browser.find_element_by_id('MegaMenuKSP'))
 
 
-    ''' Is Visible ''' 
+    ''' Units (Elements exist)''' 
     # 1st Column
     def btn_it_courses_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_it_courses)
+
+    def btn_it_courses_admin_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_it_courses_admin)
+
+    def btn_it_courses_dev_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_it_courses_dev)
+
+    def btn_leader_courses_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_leader_courses)
+
+    def btn_creating_value_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_creating_value)
+
+    # Hover 1st Column
+    # 1/a
+    def btn_it_courses_admin_aws_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_it_courses_admin_aws)
+    
+    def btn_it_courses_admin_microsoft_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_it_courses_admin_microsoft)
+     
+    def btn_it_courses_admin_cisco_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_it_courses_admin_cisco)
+    
+    def btn_it_courses_admin_oracle_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_it_courses_admin_oracle)
+    
+    def btn_it_courses_admin_vmware_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_it_courses_admin_vmware)
+
+    def btn_it_courses_admin_ibm_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_it_courses_admin_ibm)
+
+    def btn_it_courses_admin_linux_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_it_courses_admin_linux)
+     
+    def btn_it_courses_admin_other_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_it_courses_admin_other)
+
+    # 1/b
+    def btn_it_courses_dev_aws_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_it_courses_dev_aws)
+    
+    def btn_it_courses_dev_micr_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_it_courses_dev_micr)
+    
+    def btn_it_courses_dev_java_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_it_courses_dev_java)
+    
+    def btn_it_courses_dev_webdev_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_it_courses_dev_webdev)
+     
+    def btn_it_courses_dev_mobdev_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_it_courses_dev_mobdev)
+    
+    def btn_it_courses_dev_pyth_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_it_courses_dev_pyth)
+    
+    def btn_it_courses_dev_other_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_it_courses_dev_other)
+    
+    # 1/c
+    def btn_leader_courses_itil_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_leader_courses_itil)
+    
+    def btn_leader_courses_risk_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_leader_courses_risk)
+    
+    def btn_leader_courses_busn_an_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_leader_courses_busn_an)
+
+    # 1/d
+    def btn_creating_value_agile_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_creating_value_agile)
+
+    def btn_creating_value_devops_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_creating_value_devops)
+    
+    #Hover 2nd Column
+    def btn_office_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_office)
+
+    # 2
+    def btn_office_mo_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_office_mo)
+    
+    def btn_office_mo365_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_office_mo365)
+    
+    def btn_office_da_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_office_da)
+
+    def btn_office_gwc_exists(self):
+        return self.is_visible(Locators.btn_office_gwc)
+
+    # Hover 3rd Column
+    def btn_comp_man_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_comp_man)
+
+    def btn_comp_man_sap_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_comp_man_sap)
+    
+    def btn_comp_man_sfc_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_comp_man_sfc)
+    
+    # Hover 4th Column  
+    def btn_car_start_p_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_car_start_p)
+    
+    # 4/a
+    def btn_car_fy_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_car_fy)
+    
+    def btn_for_emp_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_for_emp)
+    
+    # 4/a
+    def btn_car_fy_jun_dev_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_car_fy_jun_dev)
+        
+    def btn_car_fy_app_ad_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_car_fy_app_ad)
+    
+    def btn_car_fy_soft_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_car_fy_soft_test)
+    
+    def btn_car_fy_hir_proc_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_car_fy_hir_proc)
+    
+    def btn_car_fy_apply_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_car_fy_apply)
+    
+    def btn_car_fy_faq_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_car_fy_faq)
+    
+    # 4/c
+    def btn_for_emp_prog_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_for_emp_prog)
+    
+    def btn_for_emp_jun_dev_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_for_emp_jun_dev)
+    
+    def btn_for_emp_fin_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_for_emp_fin)
+    
+    def btn_for_emp_select_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_for_emp_select)
+    
+    def btn_for_emp_grnt_exists(self):
+        assert True
+        return self.is_visible(Locators.btn_for_emp_grnt)
+    
+
+
+    ''' Navigation from IT Courses Dropdown Navigation Bar'''
+    # IT Courses/Admin
+    def nav_to_it_courses_admin(self):
+        self.do_click(Locators.nav_bar_it_courses)
+        pass
+
+
+    def nav_to_it_courses_admin_aws(self):
+        self.do_click(Locators.nav_bar_it_courses)
+        pass
+    
+
+    def nav_to_it_courses_admin_microsoft(self):
+        self.do_click(Locators.nav_bar_it_courses)
+        pass
+
+
+    def nav_to_it_courses_admin_cisco(self):
+        self.do_click(Locators.nav_bar_it_courses)
+        pass
+
+
+    def nav_to_it_courses_admin_oracle(self):
+        self.do_click(Locators.nav_bar_it_courses)
+        pass
+
+
+    def nav_to_it_courses_admin_vmware(self):
+        self.do_click(Locators.nav_bar_it_courses)
+        pass
+
+
+    def nav_to_it_courses_admin_ibm(self):
+        self.do_click(Locators.nav_bar_it_courses)
+        pass
+
+
+    def nav_to_it_courses_admin_linux(self):
+        self.do_click(Locators.nav_bar_it_courses)
+        pass
+
+
+    def nav_to_it_courses_admin_other(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
 
     
-    def btn_office_exists(self):
+    # IT Courses/Developer
+    def nav_to_it_courses_developer(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
 
 
-    def btn_comp_man_exists(self):
+    def nav_to_it_courses_developer_aws(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
 
 
-    def btn_car_start_p_exists(self):
+    def nav_to_it_courses_developer_microsoft(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
 
 
-
-    # 1/a Columns
-    def btn_it_courses_admin_exists(self):
+    def nav_to_it_courses_developer_java(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
 
 
-    def btn_it_courses_admin_aws_exists(self):
+    def nav_to_it_courses_developer_webdev(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
 
 
-    def btn_leader_courses_exists(self):
+    def nav_to_it_courses_developer_mobile(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
 
 
-    def btn_creating_value_exists(self):
+    def nav_to_it_courses_developer_python(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
 
 
-    def btn_it_courses_admin_microsoft_exists(self):
+    def nav_to_it_courses_developer_other(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
 
 
-    def btn_it_courses_admin_cisco_exists(self):
+    # IT Courses/Leader
+    def nav_to_it_courses_leader(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
 
 
-    def btn_it_courses_admin_oracle_exists(self):
+    def nav_to_it_courses_leader_itil_princ2(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
 
 
-    def btn_it_courses_admin_vmware_exists(self):
+    def nav_to_it_courses_leader_risk_management_inf_security_importer_management(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
 
 
-    def btn_it_courses_admin_ibm_exists(self):
+    def nav_to_it_courses_leader_business_analyst(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
 
 
-    def btn_it_courses_admin_linux_exists(self):
+    # IT Courses/Creating Value
+    def nav_to_it_courses_creating_value(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
 
 
-    def btn_it_courses_admin_other_exists(self):
-        pass
-
-    # 1 / b Coluns
-    def _exists(self):
+    def nav_to_it_courses_creating_value_agile(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
 
 
-    def _exists(self):
+    def nav_to_it_courses_creating_value_devops(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
 
 
-    def _exists(self):
+    # Office IT
+    def nav_to_office_it(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
 
 
-    def _exists(self):
+    def nav_to_office_it_microsoft_office(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
 
 
-    def _exists(self):
+    def nav_to_office_it_microsoft_office_365(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
 
 
-    def _exists(self):
+    def nav_to_office_it_dataanalyst_courses(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
 
 
-    def _exists(self):
+    def nav_to_office_it_workspace_courses(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
 
 
-    def _exists(self):
+    # Company Management
+    def nav_to_company_management(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
 
 
-    def _exists(self):
+    def nav_to_company_management_sap_courses(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
 
 
-    def _exists(self):
+    def nav_to_company_management_salesforce_courses(self):
+        self.do_click(Locators.nav_bar_it_courses)
+        pass
+
+    
+    # Career Start Program/For You
+    def nav_to_career_start_program_for_you(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
 
 
-    def _exists(self):
+    def nav_to_career_start_program_for_you_junior_dev_course(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
 
 
-    def _exists(self):
+    def nav_to_career_start_program_for_you_application_admin(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
 
 
-    def _exists(self):
+    def nav_to_career_start_program_for_you_software_tester(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
 
 
-    def _exists(self):
+    def nav_to_career_start_program_for_you_hiring_process(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
 
 
-    def _exists(self):
+    def nav_to_career_start_program_for_you_applying(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
 
 
-    def _exists(self):
+    def nav_to_career_start_program_for_you_faq(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
 
 
-    def _exists(self):
+    # Career Start Program/For Employers
+    def nav_to_career_start_program_for_employers(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
 
 
-    def _exists(self):
+    def nav_to_career_start_program_for_employers_about_the_program(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
 
 
-    def _exists(self):
+    def nav_to_career_start_program_for_employers_what_a_junior_knows(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
 
 
-    def _exists(self):
+    def nav_to_career_start_program_for_employers_fin_and_emp_modell(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
 
 
-    def _exists(self):
+    def nav_to_career_start_program_for_employers_guarantee(self):
+        self.do_click(Locators.nav_bar_it_courses)
         pass
-
-
-    def _exists(self):
-        pass
-
-
-    def _exists(self):
-        pass
-
-
-    def _exists(self):
-        pass
-
-
-    def _exists(self):
-        pass
-
-
-    def _exists(self):
-        pass
-
-
-    def _exists(self):
-        pass
-
-
-    def _exists(self):
-        pass
-
-
-    def _exists(self):
-        pass
-
-
-    def _exists(self):
-        pass
-
-
-    def _exists(self):
-        pass
-
-
-    def _exists(self):
-        pass
-
-
-    def _exists(self):
-        pass
-
-
-
 
     

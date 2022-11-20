@@ -1,4 +1,4 @@
-#!/Users/openmindschooling/MyStuff/Web/Training360/AutomatedTests/env/bin/python3.9
+#!/Users/openmindschooling/MyStuff/Web/Training360/AutomatedTests/env/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

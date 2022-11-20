@@ -1,22 +1,25 @@
 from selenium import webdriver
-
 import sys
 
 
 class Testdata:
 
     PATH = '/Users/openmindschooling/MyStuff/Web/Chrome_webdriver/chromedriver'
+
+    to_print = 'setting up a test failed!'
+    wrong_email = 'silvestr'
+    empty_input = ""
+    wrong_password = "sdfsd"
     
     #browser = webdriver.Chrome(PATH)
-
-    '''Pages'''
+###################################################################################################################################################
+   
+    '''Page URLS (Body)'''
     # Main
     URL ='https://www.training360.com'
     # Login
-    URL_LOGIN ='https://login.training360.com/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dtraining360%26redirect_uri%3Dhttps%253A%252F%252Fwww.training360.com%252Fsignin-oidc%26response_type%3Dcode%2520id_token%26scope%3Dopenid%2520profile%2520openid%2520profile%2520email%2520offline_access%2520role%2520userdatawebapi%26response_mode%3Dform_post%26nonce%3D637740259316546038.ZGNmNDY3OGEtNTVkYi00ZDQyLTlmNDgtZDgwNjk5MGQxYmUwMWViMGY4MzctMWY0Mi00ZGFlLTllNDgtZTBjNzNlMTFhYjZl%26state%3DCfDJ8CSYqxFFPxRLuEGwDrWibxi7paScXSVy6Lv5NQfQPc-iiOwyFQ0JHvrNnS-X6qJsSn_KK1ttNsyI_cKsDTgvgIkZmeehy-y7bzVIu3Nd3_JPj4JLEeDxdlv8ch6KlgWIQV5O0Ud9Moa3BE2YKeuMs40fP2lrxyeCuVDiZJwWqG_GLApwJTFj76FBBpNzqW-1p3tHV1d6XfkjaaO7bs3PZhI4Hl5q75Wd8P6DOhgcKV5lxsxBrjBTsQXBMxUyNX-7yf2KovzHacQQMHc-14GjrfmrWKmKazGhRs7il-3pNJDdJzIhzaSBux8Q5iu-SYmh90TykvsukrZuFv_E0hOE4wQ%26x-client-SKU%3DID_NETSTANDARD2_0%26x-client-ver%3D5.3.0.0'
-    # After Login
-    URL_AFTER_LOGIN = 'https://www.training360.com/signin-oidc'
-    # Trainings
+    URL_LOGIN ='https://login.training360.com/Account/Login'
+    # Trainings/
     TRAININGS_TRAININGS_URL = 'https://www.training360.com/treningek'
     TRAININGS_OPEN_TRAININGS_SCHEDULE_URL = 'https://www.training360.com/treningek/nyilt-trening-naptar'
     TRAININGS_TRAINING_CATALOGUE_URL = 'https://www.training360.com/treningek/katalogus'
@@ -29,17 +32,17 @@ class Testdata:
     TRAININGS_PROJECTMANAGEMENT_TRADITIONAL_URL = 'https://www.training360.com/treningek/projektmenedzsment/hagyomanyos'
     TRAININGS_PROJECTMANAGEMENT_AGILE_URL = 'https://www.training360.com/treningek/projektmenedzsment/agilis'
     TRAININGS_PROJECTMANAGEMENT_LEAN_URL = 'https://www.training360.com/treningek/projektmenedzsment/lean'
-    # E-Learning
+    # E-Learning/
     E_LEARNING_URL = 'https://www.training360.com/e-learning'
     E_LEARNING_OWNDEV_URL = 'https://www.training360.com/e-learning/sajatfejlesztesu'
     E_LEARNING_OFFICIAL_URL = 'https://www.training360.com/e-learning/hivatalos'
     E_LEARNING_UNIQUE_URL = 'https://www.training360.com/e-learning/egyedi'
     MENTORED_COURSES_URL = 'https://www.training360.com/mentoralt-kepzesek'
-    # E-Learning/Owndev
+    # E-Learning/Owndev/
     E_LEARNING_OWNDEV_OFFICE_URL = 'https://www.training360.com/e-learning/sajatfejlesztesu/office'
     E_LEARNING_OWNDEV_IT_AWARENESS_URL = 'https://www.training360.com/e-learning/sajatfejlesztesu/informatikai-tudatossag'
     E_LEARNING_OFFICIAL_URL = 'https://www.training360.com/e-learning/hivatalos'
-    # IT Courses
+    # IT Courses/
     IT_COURSES_URL = 'https://www.training360.com/informatikai-kepzesek'
     IT_COURSES_ADMIN_URL = 'https://www.training360.com/informatikai-kepzesek/uzemeltetoi'
     IT_COURSES_ADMIN_AWS_URL = 'https://www.training360.com/informatikai-kepzesek/uzemeltetoi/aws'
@@ -93,9 +96,10 @@ class Testdata:
     CAREER_START_PROGRAM_FOR_EMPLOYERS_WHAT_A_JUNIOR_KNOWS_URL = 'https://karrierprogram.training360.com/mit-tud-egy-junior-fejleszto/'
     CAREER_START_PROGRAM_FOR_EMPLOYERS_FINANCING_AND_EMPLOYING_MODELL_URL = 'https://karrierprogram.training360.com/finanszirozasi-es-foglalkoztatasi-modell/'
     CAREER_START_PROGRAM_FOR_EMPLOYERS_GARENTEES_URL = 'https://karrierprogram.training360.com/garanciak/'
+    
     # Course Schedules
     COURSE_SCHEDULES_URL = 'https://www.training360.com/tanfolyami-naptar'
-    # Discounts
+    # Discounts/
     DISCOUNTS_URL = 'https://www.training360.com/akciok'
     DISCOUNTS_AZURE_URL = 'https://www.training360.com/akciok/azure-es-cisco-ccna-tanfolyam-ajandek-vizsga-gyakorloteszttel'
     DISCOUNTS_WINDOWS_SERVER_URL = 'https://www.training360.com/akciok/windows-server-2019-ujdonsagok-uzemeltetoknek-premium-videos-tananyaggal'
@@ -105,11 +109,12 @@ class Testdata:
     CART_URL = 'https://www.training360.com/kosar'
 
 
-    '''Bottom Pages'''
+    '''Page URLS (Footer)'''
     # News
     NEWS_URL = 'https://www.training360.com/hirek'
 
-
+#######################################################################################################################################################
+    
     '''Page Titles'''
     MAIN_PAGE_TITLE = 'Training360 - Informatikai tanfolyamok, szervezetfejlesztési megoldások, vezetői és soft skill tréningek, irodai képzések, vizsgák - Training360'
     LOGIN_PAGE_TITLE = 'Bejelentkezés - Training360'
@@ -132,7 +137,7 @@ class Testdata:
     TRAININGS_OPEN_SCHEDULE_TITLE = 'Nyílt tréning naptár - Training360'
     TRAININGS_CATALOGUE_TITLE = 'Tréning katalógus - Training360'
 
-    # E-Learning
+    # E-Learning/
     E_LEARNING_TITLE = 'E-learning - Training360'
     E_LEARNING_OWNDEV_TITLE = 'Saját fejlesztésű e-learning tananyagok - Training360'
     E_LEARNING_OFFICIAL_TITLE = 'Hivatalos e-learning tananyagok - Training360'
@@ -144,25 +149,32 @@ class Testdata:
     NEWS_TITLE = 'Híreink - Training360'
     CONTACTS_TITLE = 'Kapcsolat - Training360'
 
+    # IT_Courses
+    IT_COURSES_TITLE = 'Informatikai képzések - Training360'
 
-    '''Logindata'''
+############################################################################################################################
+    SUBJECTS_TOTAL = 408
+########################################################################################################################################################
+    
+    '''Input Data'''
+
+    #Login Page username
     USERNAME ='silvester.arpad.varga@gmail.com'
-    #PASSWORD = ''
+    INCORRECT_USERNAME = 'silvest'
 
+    #Login Page password
     with open('/Users/openmindschooling/MyStuff/Web/Training360/AutomatedTests/Configs/password.txt', 'r') as file:
-
         for read in file:
             PASSWORD = read
             
 
-    INCORRECT_USERNAME = 'silvest'
-
-
-    '''searchbar queries'''
+    # Searchbar Queries | https://training360.com/(all pages with this root)
     SEARCHBAR_LESSON1 = 'Szoftvertesztelő'
 
-
-    '''Message to Company Data'''
-    NAME = 'Varga Árpád Szilveszter'
+    # Message to Company Inputs | https://www.training360.com/kapcsolat
+    #name
+    NAME = 'Varga Arpad Szilveszter'
+    #emaiil
     EMAIL = 'silvester.arpad.varga@gmail.com'
+    #textarea(message)
     MESSAGE = 'This is my message to the company. Thank you.'
