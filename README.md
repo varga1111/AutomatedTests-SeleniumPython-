@@ -2,7 +2,7 @@
 Web Automation with Selenium/Python/Pytest
 
 
-This project requires: Python3+, Pytest, Selenium, Playwright.
+This project requires: Python3+, Pytest, Selenium, Playwright and Google Chrome installed.
 
 Also in order to run the code it is mandatory to set the path of the webdriver and all the files paths that are used in the framework.
 
