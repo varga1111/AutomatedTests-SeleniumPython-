@@ -43,8 +43,8 @@ class Test_login(Parent_test):
         self.browser = Login(self.browser)
         self.browser.log_empty_inputs(Testdata.empty_input, Testdata.empty_input)
 
-    def test_log_wrong_password(self):
+    '''def test_log_wrong_password(self):
         self.browser = Login(self.browser)
-        self.browser.log_wrong_password(Testdata.USERNAME, Testdata.wrong_password)
+        self.browser.log_wrong_password(Testdata.USERNAME, Testdata.wrong_password)'''
         
 

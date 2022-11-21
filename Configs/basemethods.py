@@ -12,7 +12,7 @@ class Base_methods(Testdata):
 
     def __init__(self, browser):
         self.browser = browser
-        self.browser.maximize_window()
+        #self.browser.maximize_window()
 
 
         # Check Title
@@ -28,6 +28,7 @@ class Base_methods(Testdata):
 
         #Type
     def do_send_keys(self, by_locator, text):
+        wait(self.browser, 10).until(EC.element_to_be_clickable(by_locator)).send_keys(text)
         wait(self.browser, 10).until(EC.presence_of_element_located(by_locator)).send_keys(text)
         
 

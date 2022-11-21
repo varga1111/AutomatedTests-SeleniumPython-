@@ -36,7 +36,6 @@ class E_Learning(Base_methods):
 
     ''' Units (Elements exist)''' 
     def hyper_link_owndev_exists(self):
-<<<<<<< HEAD
         assert True
         return self.is_visible(Locators.hyper_link_owndev)
 
@@ -54,7 +53,6 @@ class E_Learning(Base_methods):
     
     def hyper_link_unique_exists(self):
         assert True
-=======
         #assert True
         return self.is_visible(Locators.btn_it_courses_dev)
 
@@ -72,7 +70,6 @@ class E_Learning(Base_methods):
     
     def hyper_link_unique_exists(self):
         #assert True
->>>>>>> b51427b22454e28c659cb0d0dd9fe07580f0fbf5
         return self.is_visible(Locators.hyper_link_unique)
 
 

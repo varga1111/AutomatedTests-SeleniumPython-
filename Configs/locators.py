@@ -168,6 +168,7 @@ class Locators(Base_methods):
     btn_coaching_dropdown = (By.XPATH, '//*[@id="PrimaryNavMainMenu"]/li[1]/div/div/div[1]/a[4]')
 ################################################################################################################################################
     '''Contact_Popupobj'''
+    name_input = (By.ID,'Name')
     name_input = (By.XPATH,'/html/body/main/div/div[1]/div/div[1]/div[2]/div/div/div/div[2]/form/div[1]/div/div/input')
     email_input = (By.ID,'Email')
     msg_box_input = (By.ID,'Message')

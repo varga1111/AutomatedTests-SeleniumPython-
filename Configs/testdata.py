@@ -173,6 +173,7 @@ class Testdata:
 
     # Message to Company Inputs | https://www.training360.com/kapcsolat
     #name
+    NAME = 'Varga Árpád Szilveszter'
     NAME = 'Varga Arpad Szilveszter'
     #emaiil
     EMAIL = 'silvester.arpad.varga@gmail.com'

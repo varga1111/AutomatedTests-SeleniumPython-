@@ -99,7 +99,7 @@ class MainPage(Base_methods):
     # Course Schedules
     def nav_to_course_schedules(self):
         self.do_click(Locators.nav_bar_course_schedules)
-        #return Course_Schedules(self.browser)
+        return Course_Schedules(self.browser)
 
     # Discounts
     def nav_to_discounts(self):
