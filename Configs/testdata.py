@@ -4,7 +4,7 @@ import sys
 
 class Testdata:
 
-    PATH = '/Users/openmindschooling/MyStuff/Web/Chrome_webdriver/chromedriver'
+    PATH = '/Users/openmindschooling/MyStuff/Web/Training360/AutomatedTests/Chrome_webdriver/chromedriver'
 
     to_print = 'setting up a test failed!'
     wrong_email = 'silvestr'
