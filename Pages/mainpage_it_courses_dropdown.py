@@ -13,19 +13,19 @@ class Mainpage_It_Courses_Dropdown(Base_methods):
     
     ''' Hovers '''
     def hover_to_btn_it_courses(self):
-        self.hover(self.browser.find_element_by_id('MegaMenuIT'))
+        self.hover(self.browser.find_element(By.ID, 'MegaMenuIT'))
 
 
     def hover_to_btn_office_it(self):
-        self.hover(self.browser.find_element_by_id('MegaMenuOffice'))
+        self.hover(self.browser.find_element(By.ID,'MegaMenuOffice'))
 
 
     def hover_to_btn_to_comp_man(self):
-        self.hover(self.browser.find_element_by_id('MegaMenuERP'))
+        self.hover(self.browser.find_element(By.ID,'MegaMenuERP'))
 
 
     def hover_to_btn_career_start_programs(self):
-        self.hover(self.browser.find_element_by_id('MegaMenuKSP'))
+        self.hover(self.browser.find_element(By.ID,'MegaMenuKSP'))
 
 
     ''' Units (Elements exist)''' 
