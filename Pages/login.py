@@ -7,16 +7,28 @@ from mainp_after_login import Mainp_after_login
 
 from selenium.webdriver.common.by import By
 import pytest
+<<<<<<< HEAD
 
 @pytest.mark.sanity
 class Login(Base_methods):
 
+=======
+import time
+
+
+@pytest.mark.sanity
+class Login(Base_methods):
+    
+>>>>>>> b51427b22454e28c659cb0d0dd9fe07580f0fbf5
     '''Constructor of the Parent class'''
     def __init__(self, browser):
         super().__init__(browser)
         self.browser.get(Testdata.URL_LOGIN)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> b51427b22454e28c659cb0d0dd9fe07580f0fbf5
         '''Get Titles'''
     def get_page_title(self, title):
         return self.get_title(title)
@@ -36,7 +48,54 @@ class Login(Base_methods):
 
         Base_methods.step_report('step 5: click login button')
         self.do_click(Locators.login_button)
+<<<<<<< HEAD
         #return Mainp_after_login(self.browser)
+=======
+        return Login(self.browser)
+
+    #@pytest.fixture
+    def log_wrong_email(self, username, password):
+        self.do_send_keys(Locators.email, username)
+        self.do_send_keys(Locators.password, password)
+        self.do_click(Locators.login_button)
+        spans = self.browser.find_elements(By.CSS_SELECTOR,'span.text-danger')
+        errs = []
+        for el in spans:
+            if el.is_displayed() == True:
+                errs.append(el)
+        assert len(errs) == 1
+
+    def log_empty_inputs(self, username, password):
+        self.do_send_keys(Locators.email, username)
+        self.do_send_keys(Locators.password, password)
+        self.do_click(Locators.login_button)
+        spans = self.browser.find_elements(By.CSS_SELECTOR,'span.text-danger')
+        errs = []
+        for el in spans:
+            if el.is_displayed() == True:
+                errs.append(el)
+        assert len(errs) == 2
+
+    def log_wrong_password(self, username, password):
+        self.do_send_keys(Locators.email, username)
+        self.do_send_keys(Locators.password, password)
+        self.do_click(Locators.login_button)
+        time.sleep(3)
+        span1 = self.browser.find_elements(By.CSS_SELECTOR,'div.response__title')
+        span2 = self.browser.find_elements(By.CSS_SELECTOR,'div.response__message')
+        errs = []
+        for el in span1:
+            if el.is_displayed() == True:
+                errs.append(el)
+        for el2 in span2:
+            if el2.is_displayed() == True:
+                errs.append(el2)
+        assert len(errs) == 2
+
+
+    
+
+>>>>>>> b51427b22454e28c659cb0d0dd9fe07580f0fbf5
 
 
     ''' Units (Elements exist)''' 

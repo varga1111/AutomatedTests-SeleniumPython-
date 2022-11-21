@@ -32,6 +32,10 @@ class Test_Nav_E_Learning(Parent_test):
     def test_hyper_link_owndev_exists(self):
         self.browser = E_Learning(self.browser)
         self.browser.hyper_link_owndev_exists()
+<<<<<<< HEAD
+=======
+        
+>>>>>>> b51427b22454e28c659cb0d0dd9fe07580f0fbf5
 
     def test_hyper_link_e_learning_lessons_exists(self):
         self.browser = E_Learning(self.browser)

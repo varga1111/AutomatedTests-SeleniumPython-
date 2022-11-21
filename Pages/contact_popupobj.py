@@ -3,7 +3,10 @@ sys.path.insert(0, '/Users/openmindschooling/MyStuff/Web/Training360/AutomatedTe
 from locators import Locators
 from basemethods import Base_methods
 
+<<<<<<< HEAD
 from selenium.webdriver.common.by import By
+=======
+>>>>>>> b51427b22454e28c659cb0d0dd9fe07580f0fbf5
 
 
 class Contact_Popupobj(Base_methods):

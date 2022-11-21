@@ -11,6 +11,11 @@ from basemethods import Base_methods
 
 from login import Login
 from test_parent import Parent_test
+<<<<<<< HEAD
+=======
+
+import pytest
+>>>>>>> b51427b22454e28c659cb0d0dd9fe07580f0fbf5
 
 class Test_login(Parent_test):
 
@@ -32,6 +37,21 @@ class Test_login(Parent_test):
         #Base_methods.step_report('step  6: verify logged in: check Bejelentkezve text & provided username is displayed')
         #Base_methods.step_report('step 7: check Kijelentkezés, E-learningtár, Training360 weboldal buttons exist')
 
+    #@pytest.mark.usefixtures('log_wrong_email')
+    def test_log_wrong_email(self):
+        self.browser = Login(self.browser)
+        self.browser.log_wrong_email(Testdata.wrong_email, Testdata.PASSWORD)
 
+<<<<<<< HEAD
 
+=======
+    def test_log_empty_inputs(self):
+        self.browser = Login(self.browser)
+        self.browser.log_empty_inputs(Testdata.empty_input, Testdata.empty_input)
+
+    def test_log_wrong_password(self):
+        self.browser = Login(self.browser)
+        self.browser.log_wrong_password(Testdata.USERNAME, Testdata.wrong_password)
+        
+>>>>>>> b51427b22454e28c659cb0d0dd9fe07580f0fbf5
 
