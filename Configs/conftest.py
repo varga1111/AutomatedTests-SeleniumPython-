@@ -1,18 +1,6 @@
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-<<<<<<< HEAD
-import os
-from datetime import datetime
-from _pytest.nodes import Item
-from _pytest.runner import CallInfo
-import allure
-from allure_commons.types import AttachmentType
-from testdata import Testdata
-
-
-@pytest.fixture(params=['Chrome'], scope ='class', autouse=True)
-=======
 #import os
 #from datetime import datetime
 #from _pytest.nodes import Item
@@ -23,20 +11,13 @@ from testdata import Testdata
 
 
 @pytest.fixture(params=['Chrome'], scope ='class')#, autouse=True)
->>>>>>> b51427b22454e28c659cb0d0dd9fe07580f0fbf5
 def init_driver(request):
     global browser
     if request.param == 'Chrome':
         opt = Options()
-<<<<<<< HEAD
-        opt.add_argument("--window-size=1920,1080")
-        opt.add_argument("--start-maximized")
-        opt.add_argument("--headless")
-=======
         #opt.add_argument("--window-size=1920,1080")
         opt.add_argument("--start-maximized")
-        #opt.add_argument("--headless")
->>>>>>> b51427b22454e28c659cb0d0dd9fe07580f0fbf5
+        opt.add_argument("--headless")
         browser = webdriver.Chrome(executable_path=Testdata.PATH, chrome_options=opt)
         #browser.maximize_window()
     request.cls.browser = browser
