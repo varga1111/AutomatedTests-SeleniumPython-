@@ -1,4 +1,3 @@
-from lib2to3.pytree import Base
 import sys
 sys.path.insert(0, '/Users/openmindschooling/MyStuff/Web/Training360/AutomatedTests/Pages')
 sys.path.insert(0, '/Users/openmindschooling/MyStuff/Web/Training360/AutomatedTests/Configs')
@@ -26,7 +25,6 @@ class Test_msg_to_comp(Parent_test):
         
     def test_fill_dataform(self):
 
-<<<<<<< HEAD
         def nav_to_message_form(self):
             self.browser = Contact(self.browser)
             self.browser.nav_to_message_form()
@@ -34,7 +32,8 @@ class Test_msg_to_comp(Parent_test):
         def fill_dataform(self):
             self.browser = Contact_Popupobj(self.browser)
             self.browser.fill_data_form(Testdata.NAME, Testdata.EMAIL, Testdata.MESSAGE)
-=======
+
+            
     def test_nav_to_message_form(self):
         self.browser = Contact(self.browser)
         self.browser.nav_to_message_form()
@@ -42,4 +41,3 @@ class Test_msg_to_comp(Parent_test):
     def test_fill_dataform(self): # This would be send message in real life and would be clicked send and checked in database and in receivers email
         self.browser = Contact_Popupobj(self.browser)
         self.browser.fill_data_form(Testdata.NAME, Testdata.EMAIL, Testdata.MESSAGE)
->>>>>>> b51427b22454e28c659cb0d0dd9fe07580f0fbf5

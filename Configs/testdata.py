@@ -7,12 +7,9 @@ class Testdata:
     PATH = '/Users/openmindschooling/MyStuff/Web/Chrome_webdriver/chromedriver'
 
     to_print = 'setting up a test failed!'
-<<<<<<< HEAD
-=======
     wrong_email = 'silvestr'
     empty_input = ""
     wrong_password = "sdfsd"
->>>>>>> b51427b22454e28c659cb0d0dd9fe07580f0fbf5
     
     #browser = webdriver.Chrome(PATH)
 ###################################################################################################################################################
@@ -176,11 +173,7 @@ class Testdata:
 
     # Message to Company Inputs | https://www.training360.com/kapcsolat
     #name
-<<<<<<< HEAD
-    NAME = 'Varga Árpád Szilveszter'
-=======
     NAME = 'Varga Arpad Szilveszter'
->>>>>>> b51427b22454e28c659cb0d0dd9fe07580f0fbf5
     #emaiil
     EMAIL = 'silvester.arpad.varga@gmail.com'
     #textarea(message)

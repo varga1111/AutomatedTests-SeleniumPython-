@@ -1,10 +1,6 @@
 from selenium.webdriver.support.ui import WebDriverWait as wait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
-<<<<<<< HEAD
-import requests
-=======
->>>>>>> b51427b22454e28c659cb0d0dd9fe07580f0fbf5
 import allure
 
 from testdata import Testdata
@@ -32,13 +28,8 @@ class Base_methods(Testdata):
 
         #Type
     def do_send_keys(self, by_locator, text):
-<<<<<<< HEAD
-        wait(self.browser, 10).until(EC.element_to_be_clickable(by_locator)).send_keys(text)
-
-=======
         wait(self.browser, 10).until(EC.presence_of_element_located(by_locator)).send_keys(text)
         
->>>>>>> b51427b22454e28c659cb0d0dd9fe07580f0fbf5
 
         # Hover (ex.: dropdown menus)
     def hover(self, element):
@@ -50,11 +41,7 @@ class Base_methods(Testdata):
         # Check visibility of element
     def is_visible(self, by_locator):
         element = wait(self.browser, 10).until(EC.element_to_be_clickable(by_locator))
-<<<<<<< HEAD
-        return bool(element)
-=======
         return bool(element) # or element.is_displayed() --> returns bool and verifies the element is on the screen not just xml, but the expected condition in this instance already verifies that
->>>>>>> b51427b22454e28c659cb0d0dd9fe07580f0fbf5
 
 
         # Save screenshot (can't call the function in tests if not pre-defined)

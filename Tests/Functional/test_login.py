@@ -11,11 +11,7 @@ from basemethods import Base_methods
 
 from login import Login
 from test_parent import Parent_test
-<<<<<<< HEAD
-=======
 
-import pytest
->>>>>>> b51427b22454e28c659cb0d0dd9fe07580f0fbf5
 
 class Test_login(Parent_test):
 
@@ -42,9 +38,7 @@ class Test_login(Parent_test):
         self.browser = Login(self.browser)
         self.browser.log_wrong_email(Testdata.wrong_email, Testdata.PASSWORD)
 
-<<<<<<< HEAD
 
-=======
     def test_log_empty_inputs(self):
         self.browser = Login(self.browser)
         self.browser.log_empty_inputs(Testdata.empty_input, Testdata.empty_input)
@@ -53,5 +47,4 @@ class Test_login(Parent_test):
         self.browser = Login(self.browser)
         self.browser.log_wrong_password(Testdata.USERNAME, Testdata.wrong_password)
         
->>>>>>> b51427b22454e28c659cb0d0dd9fe07580f0fbf5
 
