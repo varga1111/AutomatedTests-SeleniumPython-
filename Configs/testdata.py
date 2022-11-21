@@ -1,7 +1,3 @@
-from selenium import webdriver
-import sys
-
-
 class Testdata:
 
     PATH = '/Users/openmindschooling/MyStuff/Web/Training360/AutomatedTests/Chrome_webdriver/chromedriver'

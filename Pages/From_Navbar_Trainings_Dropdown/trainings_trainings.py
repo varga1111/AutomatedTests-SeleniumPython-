@@ -74,13 +74,13 @@ class Trainings_Trainings(Base_methods):
         self.browser.execute_script("window.history.go(-1)")
 
     def nav_to_softskill_trainings(self):
-        self.browser.execute_script('arguments[0].click();', self.browser.find_element_by_xpath('//*[@id="pagecontent"]/div/div[1]/div/div[2]/div/a'))
+        self.browser.execute_script('arguments[0].click();', self.browser.find_element(By.XPATH, '//*[@id="pagecontent"]/div/div[1]/div/div[2]/div/a'))
 
     def nav_to_projectmanagement(self):
-        self.browser.execute_script('arguments[0].click();', self.browser.find_element_by_xpath('//*[@id="pagecontent"]/div/div[2]/div/div[2]/div/a'))
+        self.browser.execute_script('arguments[0].click();', self.browser.find_element(By.XPATH, '//*[@id="pagecontent"]/div/div[2]/div/div[2]/div/a'))
 
     def nav_to_trainings_open_trainings_schedule(self):
-        self.browser.execute_script('arguments[0].click();', self.browser.find_element_by_xpath('//*[@id="pagecontent"]/div/div[3]/div/div[2]/div/a'))
+        self.browser.execute_script('arguments[0].click();', self.browser.find_element(By.XPATH, '//*[@id="pagecontent"]/div/div[3]/div/div[2]/div/a'))
 
     def nav_to_trainings_catalogue(self):
-        self.browser.execute_script('arguments[0].click();', self.browser.find_element_by_xpath('//*[@id="pagecontent"]/div/div[4]/div/div[2]/div/a'))
+        self.browser.execute_script('arguments[0].click();', self.browser.find_element(By.XPATH, '//*[@id="pagecontent"]/div/div[4]/div/div[2]/div/a'))

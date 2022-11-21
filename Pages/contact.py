@@ -31,7 +31,7 @@ class Contact(Base_methods):
         self.do_click(Locators.main_page_button)
 
     def nav_to_message_form(self): 
-        self.browser.execute_script("arguments[0].click();", self.browser.find_element_by_xpath('/html/body/main/div/div[1]/div/div[1]/div[2]/button'))
+        self.browser.execute_script("arguments[0].click();", self.browser.find_element(By.XPATH, '/html/body/main/div/div[1]/div/div[1]/div[2]/button'))
         return Contact_Popupobj(self.browser)
 
 

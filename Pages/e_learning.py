@@ -75,19 +75,19 @@ class E_Learning(Base_methods):
 
     '''Navigations'''
     def nav_to_elearning_owndev(self):
-        self.browser.execute_script("arguments[0].click();", self.browser.find_element_by_xpath('/html/body/main/div/p[2]/a[1]'))
+        self.browser.execute_script("arguments[0].click();", self.browser.find_element(By.XPATH, '/html/body/main/div/p[2]/a[1]'))
     
     def nav_to_e_learning_lessons(self):
-        self.browser.execute_script("arguments[0].click();", self.browser.find_element_by_xpath('/html/body/main/div/p[2]/a[2]'))
+        self.browser.execute_script("arguments[0].click();", self.browser.find_element(By.XPATH,'/html/body/main/div/p[2]/a[2]'))
 
     def nav_to_e_learning_official(self):
-        self.browser.execute_script("arguments[0].click();", self.browser.find_element_by_xpath('/html/body/main/div/p[4]/a'))
+        self.browser.execute_script("arguments[0].click();", self.browser.find_element(By.XPATH, '/html/body/main/div/p[4]/a'))
 
     def nav_to_mentored_courses(self):
-        self.browser.execute_script("arguments[0].click();", self.browser.find_element_by_xpath('/html/body/main/div/p[6]/a'))
+        self.browser.execute_script("arguments[0].click();", self.browser.find_element(By.XPATH, '/html/body/main/div/p[6]/a'))
 
     def nav_to_e_learning_unique(self):
-        self.browser.execute_script("arguments[0].click();", self.browser.find_element_by_xpath('/html/body/main/div/p[8]/a'))
+        self.browser.execute_script("arguments[0].click();", self.browser.find_element(By.XPATH, '/html/body/main/div/p[8]/a'))
 
     
 

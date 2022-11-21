@@ -59,7 +59,6 @@ class Base_methods(Testdata):
         self.browser.execute_script("window.history.go(-1)")'''
     
     '''def execute_script(self, by_locator):
-        wait(self.browser, 10).until(EC.presence_of_element_located(by_locator))
         self.browser.execute_script('arguments[0].click();' , by_locator)'''
 
 

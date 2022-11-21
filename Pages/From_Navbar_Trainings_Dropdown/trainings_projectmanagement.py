@@ -73,10 +73,10 @@ class Trainings_Projectmanagement(Base_methods):
         self.browser.execute_script("window.history.go(-1)")
 
     def nav_to_projectmanagement_traditional (self):
-        self.browser.execute_script('arguments[0].click();', self.browser.find_element_by_xpath('//*[@id="pagecontent"]/div/div[1]/div/div[2]/div/a'))
+        self.browser.execute_script('arguments[0].click();', self.browser.find_element(By.XPATH, '//*[@id="pagecontent"]/div/div[1]/div/div[2]/div/a'))
 
     def nav_to_projectmanagement_agile(self):
-        self.browser.execute_script('arguments[0].click();', self.browser.find_element_by_xpath('//*[@id="pagecontent"]/div/div[2]/div/div[2]/div/a/i'))
+        self.browser.execute_script('arguments[0].click();', self.browser.find_element(By.XPATH, '//*[@id="pagecontent"]/div/div[2]/div/div[2]/div/a/i'))
 
     def nav_to_projectmanagement_lean(self):
-        self.browser.execute_script('arguments[0].click();', self.browser.find_element_by_xpath('//*[@id="pagecontent"]/div/div[3]/div/div[2]/div/a'))
+        self.browser.execute_script('arguments[0].click();', self.browser.find_element(By.XPATH, '//*[@id="pagecontent"]/div/div[3]/div/div[2]/div/a'))

@@ -3,6 +3,9 @@ from basemethods import Base_methods
 
 
 class Locators(Base_methods):
+
+    project_management_traditional = (By.XPATH, '//*[@id="pagecontent"]/div/div[1]/div/div[2]/div/a')
+
     '''MainPage '''
     main_page_button = (By.XPATH, '//*[@id="navbar"]/div[1]/a/img')
     popup_close_btn = (By.ID,'NewsletterModalCloseButton')
