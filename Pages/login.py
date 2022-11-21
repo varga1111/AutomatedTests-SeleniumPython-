@@ -10,7 +10,7 @@ import pytest
 import time
 
 
-@pytest.mark.sanity
+
 class Login(Base_methods):
     
     '''Constructor of the Parent class'''
